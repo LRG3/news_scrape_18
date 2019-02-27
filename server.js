@@ -15,7 +15,7 @@ var db = require("./models");
 var PORT = process.env.PORT || 3000;
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/startribunePopulater";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 // Initialize Express
 var app = express();
@@ -37,7 +37,7 @@ app.use(express.static("public"));
 // By default mongoose uses callbacks for async queries, we're setting it to use promises (.then syntax) instead
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-//mongoose.connect("mongodb://localhost/startribunePopulater");
+//mongoose.connect("mongodb://localhost/mongoHeadlines");
 mongoose.connect(MONGODB_URI);
 
 
