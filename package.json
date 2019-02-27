@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "axios": "^0.18.0",
         "express": ">=2.5.0",
         "jade": ">= 0.16.4",
         "mongoose": ">=2.3.10",
